@@ -7,6 +7,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 
 public class AboutActivity extends AppCompatActivity {
 
@@ -31,6 +32,7 @@ public class AboutActivity extends AppCompatActivity {
 
         Glide.with(getApplicationContext())
                 .load(url_profil)
+                .apply(new RequestOptions().override(200,200))
                 .into(iVProfil);
 
         tVNama.setText(nama);

@@ -45,6 +45,7 @@ public class ListHeroAdapter extends RecyclerView.Adapter<ListHeroAdapter.ListVi
 
         holder.tvName.setText(hero.getName());
         holder.tvFrom.setText(hero.getFrom());
+        holder.tvHarga.setText(hero.getHarga());
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -61,12 +62,13 @@ public class ListHeroAdapter extends RecyclerView.Adapter<ListHeroAdapter.ListVi
 
     class ListViewHolder extends RecyclerView.ViewHolder {
         ImageView imgPhoto;
-        TextView tvName, tvFrom;
+        TextView tvName, tvFrom, tvHarga;
         ListViewHolder(@NonNull View itemView) {
             super(itemView);
             imgPhoto = itemView.findViewById(R.id.img_item_photo);
             tvName = itemView.findViewById(R.id.tv_item_name);
             tvFrom = itemView.findViewById(R.id.tv_item_from);
+            tvHarga = itemView.findViewById(R.id.tv_harga);
         }
     }
 

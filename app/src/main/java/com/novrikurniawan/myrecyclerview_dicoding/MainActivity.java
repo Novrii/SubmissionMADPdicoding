@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
 
     private RecyclerView rvHeroes;
     private ArrayList<Hero> list = new ArrayList<>();
-    private String title = "Mode List";
+    private String title = "Daftar Kelas";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,7 +39,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void showSelectedHero(Hero hero) {
-        Toast.makeText(this, "Kamu memilih " + hero.getName(), Toast.LENGTH_SHORT).show();
+//        Toast.makeText(this, "Kamu memilih " + hero.getName(), Toast.LENGTH_SHORT).show();
+
+        Intent i = new Intent(MainActivity.this, DetailActivity.class);
+        i.putExtra(DetailActivity.EXTRA_NAMA, hero.getName());
+        i.putExtra(DetailActivity.EXTRA_GAMBAR, hero.getPhoto());
+        i.putExtra(DetailActivity.EXTRA_OLEH, hero.getFrom());
+        i.putExtra(DetailActivity.EXTRA_HARGA, hero.getHarga());
+        startActivity(i);
     }
 
     private void showRecyclerList(){
