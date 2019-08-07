@@ -1,5 +1,6 @@
 package com.novrikurniawan.myrecyclerview_dicoding;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
@@ -104,7 +105,8 @@ public class MainActivity extends AppCompatActivity {
                 showRecyclerCardView();
                 break;
             case R.id.action_profil:
-                Toast.makeText(this, "Profil", Toast.LENGTH_SHORT).show();
+                Intent profil = new Intent(MainActivity.this, AboutActivity.class);
+                startActivity(profil);
                 break;
         }
     }

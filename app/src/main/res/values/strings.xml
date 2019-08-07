@@ -9,4 +9,7 @@
     <string name="favorite">Favorite</string>
     <string name="share">Share</string>
     <string name="profil">profil</string>
+    <string name="harga">harga</string>
+    <string name="email_about">e-mail</string>
+    <string name="nama_about">Nama</string>
 </resources>
