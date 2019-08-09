@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MyRecyclerView-dicoding</string>
+    <string name="app_name">Kelas Dicoding</string>
     <string name="heroes_name">Nama Pahlawan</string>
     <string name="from">Asal</string>
     <string name="list">List</string>
@@ -12,4 +12,5 @@
     <string name="harga">harga</string>
     <string name="email_about">e-mail</string>
     <string name="nama_about">Nama</string>
+    <string name="deskripsi">Deskripsi</string>
 </resources>

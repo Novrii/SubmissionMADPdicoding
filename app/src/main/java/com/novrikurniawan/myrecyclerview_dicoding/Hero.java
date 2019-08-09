@@ -6,6 +6,7 @@ public class Hero {
     private String from;
     private String photo;
     private String harga;
+    private String deskripsi;
 
     public String getName() {
         return name;
@@ -37,5 +38,13 @@ public class Hero {
 
     public void setHarga(String harga) {
         this.harga = harga;
+    }
+
+    public String getDeskripsi() {
+        return deskripsi;
+    }
+
+    public void setDeskripsi(String deskripsi) {
+        this.deskripsi = deskripsi;
     }
 }

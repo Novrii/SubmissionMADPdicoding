@@ -46,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
         i.putExtra(DetailActivity.EXTRA_GAMBAR, hero.getPhoto());
         i.putExtra(DetailActivity.EXTRA_OLEH, hero.getFrom());
         i.putExtra(DetailActivity.EXTRA_HARGA, hero.getHarga());
+        i.putExtra(DetailActivity.EXTRA_DESKRIPSI, hero.getDeskripsi());
         startActivity(i);
     }
 
@@ -98,23 +99,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void setMode(int selectedMode){
-        switch (selectedMode){
-            case R.id.action_list:
-                title = "Mode List";
-                showRecyclerList();
-                break;
-            case R.id.action_grid:
-                title = "Mode Grid";
-                showRecyclerGrid();
-                break;
-            case R.id.action_cardview:
-                title = "Mode Card";
-                showRecyclerCardView();
-                break;
-            case R.id.action_profil:
-                Intent profil = new Intent(MainActivity.this, AboutActivity.class);
-                startActivity(profil);
-                break;
+        if (selectedMode == R.id.action_profil){
+            Intent profil = new Intent(MainActivity.this, AboutActivity.class);
+            startActivity(profil);
         }
     }
 }
